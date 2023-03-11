@@ -1,0 +1,10 @@
+def maxXor(lo, hi, k):
+    # Write your code here
+    maxi = 0
+
+    for i in range(lo,hi+1):
+        for j in range(i+1,hi+1):
+            ans = i^j
+            if ans<=k:
+                maxi = max(maxi,ans)
+    return maxi
